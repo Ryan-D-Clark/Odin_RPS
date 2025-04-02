@@ -1,0 +1,31 @@
+#page-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#buttons-container{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    width: 80vw;
+    padding: 10vh;
+}
+
+#score-container{
+    display: flex;
+    width: 80vw;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.title{
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.value{
+    text-align: center;
+}

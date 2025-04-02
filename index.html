@@ -5,8 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock|Paper|Scissors</title>
     <script src="external.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="page-container">
+        <div id="status-container">
+            <p id="status-message">Pick an option to play</p>
+        </div>
+        <div id="score-container">
+            <div id="player-score">
+                <div class="title">Player</div>
+                <div id="player-value" class="value">0</div>
+            </div>
+            <div id="computer-score">
+                <div class="title">Computer</div>
+                <div id="computer-value" class="value">0</div>
+            </div>
+        </div>
+        <div id="buttons-container">
+            <button id="rock" class="option">Rock</button>
+            <button id="paper" class="option">Paper</button>
+            <button id="scissors" class="option">Scissors</button>
+        </div>
+    </div>
 </body>
 </html>
