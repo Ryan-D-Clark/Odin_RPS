@@ -4,10 +4,7 @@ let computerScore = 0
 function playRound(){
     const humanChoice = getHumanChoice()
     const computerChoice = getComputerChoice()
-
     console.log(humanChoice, computerChoice)
-    playerScore += 1
-    computerScore += 1
 
     if(humanChoice == "rock"){
         switch (computerChoice){
@@ -16,8 +13,35 @@ function playRound(){
             case "paper":
                 computerScore += 1
                 break;
+            case "scissors":
+                playerScore += 1
+                break;
+        }
+    }if(humanChoice == "paper"){
+        switch (computerChoice){
+            case "rock":
+                playerScore += 1
+                break;
+            case "paper":
+                break;
+            case "scissors":
+                computerScore += 1
+                break;
+        }
+    }if(humanChoice == "scissors"){
+        switch (computerChoice){
+            case "rock":
+                computerScore += 1
+                break;
+            case "paper":
+                playerScore += 1
+                break;
+            case "scissors":
+                break;
         }
     }
+    console.log("Human", humanChoice, playerScore, "Computer", computerChoice, computerScore)
+
 }
 
 function getHumanChoice(){
@@ -31,4 +55,10 @@ function getComputerChoice(){
     return choice.toLowerCase()
 }
 
-playRound()
+function playGame(rounds){
+    for(let i = 1; i <= rounds; i++){
+        playRound()
+    }
+}
+
+playGame(5)
